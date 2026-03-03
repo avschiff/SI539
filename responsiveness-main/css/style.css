@@ -1,0 +1,125 @@
+.grid {
+		/*Grid Specific*/
+
+	  /*General Styline*/
+	  background-color: #2196F3;
+	  background-image: url('../imgs/background.jpg');
+	  padding: 10px;
+	  width:90%;
+	  height: 80vh;
+	  text-align: center;
+	  font-size: 30px;
+	  border: 3px solid black;
+	  border-radius: 25px;
+	  margin: 0 auto;
+}
+
+
+.grid > div {
+	  background-color: rgba(255, 255, 255, 0.8);
+	  text-align: center;
+	  padding: 5px;
+	border: 2px solid black;
+	  font-size: 30px;
+}
+
+h1, h2{
+	text-align: center;
+	margin: 10px;
+	font-size: 200%;
+
+}
+
+
+.grid > div{
+	max-height:40px;
+}
+
+img{
+	width:25%;
+	display: block;
+	margin: auto;
+}
+
+/* ****** BEGIN HERE!! */
+
+.grid{
+	display: grid;
+	gap: 5px;
+	grid-template-columns: 500px;
+	justify-content: left;
+	justify-items: normal;
+	align-items: top;
+	align-content: normal;
+	overflow: auto;
+	/* Play with: */
+	/* justify-content:; */
+	/* justify-items:;  */
+	/* align-items:; */
+	/* align-content:; */
+ }
+
+ 
+
+
+@media screen and (min-width: 776px){
+
+	body{
+		background-color: yellow;
+	}
+
+	.grid > div{
+		max-height:none;
+	}
+
+	/* Make this a two column grid. */
+	.grid{
+		grid-template-columns: repeat(2, 1fr);
+		justify-content: center;
+		align-items: left;
+
+		
+		/* Play with: */
+		/* justify-content:; */
+		/* align-items:;  */
+
+
+		
+ 	}
+
+ 	.item1{
+ 		 /* Span the entire first row  */
+		grid-column: 1 / -1;
+		
+ 	}
+	
+	.item2{
+		/* Start in row 2 and span 3 rows */
+		grid-row: 2 / span 3;
+
+	}
+
+}
+@media screen and (min-width: 1120px){
+	body{
+		background-color: green;
+	}
+
+	/* Make this a three column grid using fr. */
+	.grid{
+		grid-template-columns: repeat(3, 1fr);
+		/* Why don't we bother with justify here? 
+		We already justified .grid before and it does not need any changes here!*/
+	}
+	.item3{
+		/* Start in row 2 and span two rows 
+		   Start in column 2 and span two columns */
+		grid-row: 2 / span 2;
+		grid-column: 2 / span 2;
+	}
+
+		/* What happens if you try to span 3 columns 
+		It places '4' in its own new column!*/
+	}
+
+	
