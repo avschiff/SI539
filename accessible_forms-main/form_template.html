@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="imgs/email.png"/>
+  <title>Sample Form - Template</title>
+  <!-- <link rel="stylesheet" href="css/style.css"/> -->
+
+</head>
+<body>
+<form action="https://formspree.io/f/mvzwkwqg" method="POST">
+  <fieldset>
+    <legend>Pet Adoption Application</legend>
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email">
+
+    <label for="bio">Short Bio</label>
+    <textarea id="bio" name="bio" placeholder="Tell us about yourself..."></textarea>
+
+    <label for="pet">Pet Type</label>
+    <select id="pet" name="pet_type">
+      <option>Dog</option>
+      <option>Cat</option>
+      <option>Bunny</option>
+    </select>
+
+    <p>Owned a pet before?</p>
+    <input type="checkbox" id="petbefore" name="pet_before">
+    <label for="petbefore">Yes</label>
+
+    <p>Do you have any allergies?</p>
+    <input type="checkbox" id="allergies" name="allergies">
+    <label for="allergies">Yes</label>
+
+    <label for="allergyname">Allergy Names</label>
+    <input type="text" id="allergyname" name="allergyname">
+   
+    <label for="age">What is the preferred age of the pet?</label>
+    <input type="radio" id="young" name="age" value="young">
+    <label for="young">Puppy/Kitten</label>
+    <input type="radio" id="adult" name="age" value="adult">
+    <label for="adult">Adult</label>
+    <input type="radio" id="senior" name="age" value="senior">
+    <label for="senior">Senior</label>
+
+    <label for="date">Adoption Date</label>
+    <input type="date" id="date" name="adoption_date">
+
+    <label for="color">Collar Color</label>
+    <input type="color" id="color" name="collar_color">
+
+    <input type="submit" value="Submit Survey">
+  </fieldset>
+ </form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+.jumper{
+    position: absolute;
+    top: -40px;
+    z-index: 1000;
+}
+
+.jumper:focus {
+    top:10px
+}
+
+/* Recreate the view below where each of the 3 divs utilizes a grid with equal 3 columns of 25% each. 
+Outline each div with a 3px border of color #e91e63
+There should be 25 pixels of margin between each div. (Use either top or bottom)
+There may be additional properties you need to change to match the image.*/
+div{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    justify-content: space-between;
+    outline: 3px solid #e91e63;
+    margin-bottom: 25px;
+}
+div:last-child{
+    outline: none;
+}
+
+/* The default styling all the children elements is a 
+3px border with the color #708090 
+a gray background color of your choice.
+Rounded corners that  closely match our example
+45px padding on the top and bottom and 20px PADDING on the sides.   
+Centered text. */
+div p{
+    border: 3px solid #708090;
+    background-color: grey;
+    border-radius: 10000px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+div p:last-child{
+    border-radius: 0px;
+    grid-column: -1/1;
+}
+
+/* Set the breakpoint to 800px. */
+@media (min-width: 800px){
+    /* Style only the first div to have
+    A grid of two columns with 40% each */
+    div:first-child{
+        display: grid;
+        grid-template-columns: 40% 40%;
+    }
+
+    /* Style the paragraphs to match the image below 
+    The default style for the paragraphs must change, including using a 2px border with the color #000045
+    Every 3rd item of the div should take up the entire row.
+    Note – the last item (J) should disappear entirely */
+    div:first-child p{
+        border: 2px solid #000045;
+        border-radius: 0px;
+    }
+    div:first-child p:last-child{
+        display: none;
+    }
+    div:first-child p:nth-child(3n){
+        grid-column: -1/1;
+    }
+}
+

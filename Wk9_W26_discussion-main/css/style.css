@@ -1,0 +1,43 @@
+.jumper{
+    position: absolute;
+    top: -40px;
+    z-index: 1000;
+}
+
+.jumper:focus {
+    top:10px
+}
+
+.first{
+    display:grid;
+    grid-template-columns: 25% 25% 25%;
+    outline: 3px solid #e91e63;
+    gap: 50px;
+}
+
+.first p{
+    border: 3px dashed #7332a8;
+    background: lightgrey;
+    border-radius: 12px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.first p:last-child{
+    border-radius: 0px;
+    grid-column: -1 / 1;
+}
+
+@media (min-width: 800px) {
+    .first{
+        background-color: #bdd4fc;
+        justify-content: center;
+    }
+}
+
+/* The difference between justify-content and justify-items is that
+justify-content moves the entire grid whereas justify-items moves the items
+within each container of the grid. */
